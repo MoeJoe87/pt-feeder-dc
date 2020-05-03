@@ -11,7 +11,7 @@ services:
       - TZ=Europe/Zurich
     volumes:
       - ./application.properties:/app/ProfitTrailer/application.properties
-      - ./config:/pt-feeder/config
+      - ./config:/app/pt-feeder/config
       - ./database:/app/pt-feeder/database
       - ./logs:/app/pt-feeder/logs
     restart: unless-stopped
