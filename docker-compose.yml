@@ -1,0 +1,17 @@
+
+version: '3'
+
+services:
+  ptfeeder:
+    image: moli87/pt-feeder-dc:latest
+    container_name: pt-feeder
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Zurich
+    volumes:
+      - ./application.properties:/app/ProfitTrailer/application.properties
+      - ./config:/pt-feeder/config
+      - ./database:/app/pt-feeder/database
+      - ./logs:/app/pt-feeder/logs
+    restart: always
