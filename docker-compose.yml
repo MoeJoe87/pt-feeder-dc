@@ -3,7 +3,7 @@ version: '3'
 
 services:
   ptfeeder:
-    image: moli87/pt-feeder-dc:latest
+    image: moli87/pt-feeder-dc
     container_name: pt-feeder
     environment:
       - PUID=1000
