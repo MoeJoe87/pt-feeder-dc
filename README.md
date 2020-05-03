@@ -1,6 +1,7 @@
 # pt-feeder-dc
 
 PT Feeder Docker
+Note: This is an addon for Profit Trailer
 
 Compatible with Profit Trailer version : v2.4.25 and above
 `https://wiki.profittrailer.com/doku.php`
