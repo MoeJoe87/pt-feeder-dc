@@ -59,3 +59,16 @@ services:
       - ./logs:/app/pt-feeder/logs
     restart: unless-stopped
 ```
+If you like it, support appreciated!
+
+BTC: 17cqx7P6aRn9egZfSkzbyNqKjd3Xm6W9T4
+
+BCH: qq020gjmrd83rfaut4fzrncc8ejlv32q4yuhnzgc5c
+
+BNB: bnb1m6fn76pplwf3pwem62ghcpryruu0kmnmrmsq22
+
+ETH: 0x4B2895914147787d0C15868F86c460aF6Fb45D91
+
+LTC: LbvRzuBrF4eVrEC2zkHveQAxEyfaNBAa3j
+
+XMR: 45sS3GEkui1LosH14zvnvwChqEy8sK4pJXWAax1VvSD9BSN9qUsAuzsVwoTrvMjFndS9LpYpGBpCwY9JxifzxAW16wWsAAY
