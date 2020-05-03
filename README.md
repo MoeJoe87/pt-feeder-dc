@@ -1,6 +1,7 @@
 # pt-feeder-dc
 
 PT Feeder Docker
+
 Note: This is an addon for Profit Trailer
 
 Compatible with Profit Trailer version : v2.4.25 and above
@@ -40,7 +41,7 @@ docker create \
 
 ### docker-compose
 
-- Compatible with docker-compose v3 schemas
+Compatible with docker-compose v3 schemas
 
 ```bash
 ---
