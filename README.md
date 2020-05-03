@@ -19,12 +19,43 @@ Compatible with Profit Trailer version : v2.4.25 and above
 - Download and edit application.properties with your license key and exchange apis, other wise the bot will not start. See for `https://wiki.profittrailer.com/doku.php?id=start` reference.
 - To Run Container and replace `<your path>` with the full path where the application.properties file and data folder are.
 
+### docker
+
 ```bash
-docker run -v <your path>/application.properties:/app/ProfitTrailer/application.properties -v <your path>/data:/app/ProfitTrailer/data -p 8081:8081 --name pt jakkie/profit-trailer-docker
+docker create \
+  --name=radarr \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=Europe/London \
+  -e UMASK_SET=022 `#optional` \
+  -p 7878:7878 \
+  -v /path/to/data:/config \
+  -v /path/to/movies:/movies \
+  -v /path/to/downloadclient-downloads:/downloads \
+  --restart unless-stopped \
+  linuxserver/radarr
 ```
 
 - After Profit Trailer is running browse to the url example `http://your-ip:8081`
 
+### docker-compose
+
+- Compatible with docker-compose v3 schemas
+
 ```bash
-http://localhost:8081
+---
+version: "2.1"
+services:
+  radarr:
+    image: moli87/pt-feeder-dc
+    container_name: pt-feeder
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - /path/to/data:/config
+      - /path/to/movies:/movies
+      - /path/to/downloadclient-downloads:/downloads
+    restart: always
 ```
