@@ -37,8 +37,6 @@ docker create \
   linuxserver/radarr
 ```
 
-- After Profit Trailer is running browse to the url example `http://your-ip:8081`
-
 ### docker-compose
 
 Compatible with docker-compose v3 schemas
