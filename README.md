@@ -2,6 +2,12 @@
 
 PT Feeder Docker
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/moli87/pt-feeder-dc.svg?label=pulls&logo=docker&logoColor=FFFFFF)](https://hub.docker.com/r/moli87/pt-feeder-dc/)
+[![Docker Stars](https://img.shields.io/docker/stars/moli87/pt-feeder-dc.svg?label=stars&logo=docker&logoColor=FFFFFF)](https://hub.docker.com/r/moli87/pt-feeder-dc/)
+[![](https://images.microbadger.com/badges/image/moli87/pt-feeder-dc.svg)](https://microbadger.com/images/moli87/pt-feeder-dc/ "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/moli87/pt-feeder-dc.svg)](https://microbadger.com/images/moli87/pt-feeder-dc/ "Get your own version badge on microbadger.com")
+[![Docker Build Status](https://img.shields.io/docker/cloud/build/moli87/pt-feeder-dc.svg?label=build&logo=docker&logoColor=FFFFFF)](https://hub.docker.com/r/moli87/pt-feeder-dc/)
+
 Note: This is an addon for Profit Trailer
 
 Compatible with Profit Trailer version : v2.4.25 and above
