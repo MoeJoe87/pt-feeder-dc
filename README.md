@@ -28,7 +28,7 @@ docker create \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Europe/Zurich \
-  -v /path/to/profittrailer:/app/ProfitTrailer/application.properties \
+  -v /path/to/profittrailer/application.properties:/app/ProfitTrailer/application.properties \
   -v /path/to/feeder-config:/app/pt-feeder/config \
   -v /path/to/feeder-database:/app/pt-feeder/database \
   -v /path/to/feeder-logs:/app/pt-feeder/logs \
