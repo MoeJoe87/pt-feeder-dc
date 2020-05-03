@@ -5,7 +5,7 @@ PT Feeder Docker
 Note: This is an addon for Profit Trailer
 
 Compatible with Profit Trailer version : v2.4.25 and above
-`https://wiki.profittrailer.com/doku.php`
+`https://wiki.ptfeeder.co/`
 
 ## Install Docker
 
@@ -17,8 +17,8 @@ Compatible with Profit Trailer version : v2.4.25 and above
 
 ### Run latest PT Feeder version
 
-- Download and edit application.properties with your license key and exchange apis, other wise the bot will not start. See for `https://wiki.profittrailer.com/doku.php?id=start` reference.
-- To Run Container and replace `<your path>` with the full path where the application.properties file and data folder are.
+- Download and edit settings from feeder. See for `https://wiki.ptfeeder.co/` reference.
+- To Run Container and replace `/path/to/""` with the full path where the application.properties file and other folders are.
 
 ### docker
 
@@ -33,7 +33,7 @@ docker create \
   -v /path/to/feeder-database:/app/pt-feeder/database \
   -v /path/to/feeder-logs:/app/pt-feeder/logs \
   --restart unless-stopped \
-  moli87/pt-feeder-dc:latest
+  moli87/pt-feeder-dc
 ```
 
 ### docker-compose
@@ -46,7 +46,7 @@ version: '3'
 
 services:
   ptfeeder:
-    image: moli87/pt-feeder-dc:latest
+    image: moli87/pt-feeder-dc
     container_name: pt-feeder
     environment:
       - PUID=1000
