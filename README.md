@@ -24,15 +24,16 @@ Compatible with Profit Trailer version : v2.4.25 and above
 
 ```bash
 docker create \
-  --name=radarr \
+  --name=pt-feeder \
   -e PUID=1000 \
   -e PGID=1000 \
-  -e TZ=Europe/London \
-  -v /path/to/data:/config \
-  -v /path/to/movies:/movies \
-  -v /path/to/downloadclient-downloads:/downloads \
-  --restart unless-stopped \
-  linuxserver/radarr
+  -e TZ=Europe/Zurich \
+  -v /path/to/profittrailer:/app/ProfitTrailer/application.properties \
+  -v /path/to/feeder-config:/app/pt-feeder/config \
+  -v /path/to/feeder-database:/app/pt-feeder/database \
+  -v /path/to/feeder-logs:/app/pt-feeder/logs \
+  --restart always \
+  moli87/pt-feeder-dc:latest
 ```
 
 ### docker-compose
@@ -53,7 +54,7 @@ services:
       - TZ=Europe/Zurich
     volumes:
       - ./application.properties:/app/ProfitTrailer/application.properties
-      - ./config:/pt-feeder/config
+      - ./config:/app/pt-feeder/config
       - ./database:/app/pt-feeder/database
       - ./logs:/app/pt-feeder/logs
     restart: always
