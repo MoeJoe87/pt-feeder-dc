@@ -14,4 +14,4 @@ services:
       - ./config:/pt-feeder/config
       - ./database:/app/pt-feeder/database
       - ./logs:/app/pt-feeder/logs
-    restart: always
+    restart: unless-stopped
