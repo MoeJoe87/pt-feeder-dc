@@ -28,8 +28,6 @@ docker create \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Europe/London \
-  -e UMASK_SET=022 `#optional` \
-  -p 7878:7878 \
   -v /path/to/data:/config \
   -v /path/to/movies:/movies \
   -v /path/to/downloadclient-downloads:/downloads \
@@ -43,18 +41,20 @@ Compatible with docker-compose v3 schemas
 
 ```bash
 ---
-version: "2.1"
+version: '3'
+
 services:
-  radarr:
-    image: moli87/pt-feeder-dc
+  ptfeeder:
+    image: moli87/pt-feeder-dc:latest
     container_name: pt-feeder
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/London
+      - TZ=Europe/Zurich
     volumes:
-      - /path/to/data:/config
-      - /path/to/movies:/movies
-      - /path/to/downloadclient-downloads:/downloads
+      - ./application.properties:/app/ProfitTrailer/application.properties
+      - ./config:/pt-feeder/config
+      - ./database:/app/pt-feeder/database
+      - ./logs:/app/pt-feeder/logs
     restart: always
 ```
