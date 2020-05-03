@@ -32,7 +32,7 @@ docker create \
   -v /path/to/feeder-config:/app/pt-feeder/config \
   -v /path/to/feeder-database:/app/pt-feeder/database \
   -v /path/to/feeder-logs:/app/pt-feeder/logs \
-  --restart always \
+  --restart unless-stopped \
   moli87/pt-feeder-dc:latest
 ```
 
@@ -57,5 +57,5 @@ services:
       - ./config:/app/pt-feeder/config
       - ./database:/app/pt-feeder/database
       - ./logs:/app/pt-feeder/logs
-    restart: always
+    restart: unless-stopped
 ```
