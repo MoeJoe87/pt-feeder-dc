@@ -18,7 +18,7 @@ Compatible with Profit Trailer version : v2.4.25 and above
 ### Run latest PT Feeder version
 
 - Download and edit settings from feeder. See for `https://wiki.ptfeeder.co/` reference.
-- To Run Container and replace `/path/to/""` with the full path where the application.properties file and other folders are.
+- To create Container just replace `/path/to/""` with the full path where the files and other folders are.
 
 ### docker
 
