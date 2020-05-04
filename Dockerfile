@@ -25,7 +25,7 @@ RUN mkdir -p /app/
 WORKDIR /app
 
 RUN curl https://github.com/mehtadone/PTFeeder/releases/download/pt-feeder-v$PTFEEDER_VERSION/pt-feeder-v$PTFEEDER_VERSION.zip
-RUN unzip pt-feeder-v$PT_VERSION.zip
+RUN unzip pt-feeder-v$PTFEEDER_VERSION.zip
 
 WORKDIR /app/pt-feeder
 RUN chmod +x pt-feeder.dll
