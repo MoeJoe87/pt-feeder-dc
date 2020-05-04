@@ -1,11 +1,10 @@
 FROM ubuntu:16.04
 
-RUN apt-get update && apt-get install -y unzip wget && apt-get clean
 RUN wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 RUN dpkg -i packages-microsoft-prod.deb
-RUN apt-get update
-RUN apt-get install -y apt-transport-https
-RUN apt-get install -y dotnet-sdk-3.1
+RUN apt-get update && apt-get install -y unzip wget && apt-get clean
+RUN apt-get install -y apt-transport-https && apt-get clean
+RUN apt-get install -y dotnet-sdk-3.1 && apt-get clean
 RUN npm install pm2@latest -g
 
 ARG PTFEEDER_VERSION=1.8.5.1623
