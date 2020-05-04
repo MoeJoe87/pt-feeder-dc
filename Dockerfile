@@ -19,3 +19,4 @@ RUN chmod +x pt-feeder.dll
 VOLUME /app/pt-feeder
 
 CMD pm2 start pm2-PT-Feeder.json && pm2 log 0
+
