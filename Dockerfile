@@ -19,12 +19,12 @@ RUN dotnet_sdk_version=3.1.201 \
     && dotnet help
 
 ARG PTFEEDER_VERSION=1.8.5.1623
-ENV PTFEEDER_VERSION ${PT_VERSION}
+ENV PTFEEDER_VERSION ${PTFEEDER_VERSION}
 
 RUN mkdir -p /app/
 WORKDIR /app
 
-RUN curl https://github.com/mehtadone/PTFeeder/releases/download/pt-feeder-v$PT_VERSION/pt-feeder-v$PT_VERSION.zip
+RUN curl https://github.com/mehtadone/PTFeeder/releases/download/pt-feeder-v$PTFEEDER_VERSION/pt-feeder-v$PTFEEDER_VERSION.zip
 RUN unzip pt-feeder-v$PT_VERSION.zip
 
 WORKDIR /app/pt-feeder
