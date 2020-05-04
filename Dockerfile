@@ -5,18 +5,6 @@ RUN apt-get install -y unzip curl openjdk-8-jdk
 RUN curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh && bash nodesource_setup.sh
 RUN apt-get install -y nodejs && apt-get clean
 RUN npm install pm2@latest -g
-
-# Install .NET CLI dependencies
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        libc6 \
-        libgcc1 \
-        libgssapi-krb5-2 \
-        libicu60 \
-        libssl1.1 \
-        libstdc++6 \
-        zlib1g \
-    && rm -rf /var/lib/apt/lists/*
     
     # Install .NET Core SDK
 RUN dotnet_sdk_version=3.1.201 \
